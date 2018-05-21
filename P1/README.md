@@ -10,7 +10,7 @@ La segunda se llama maquina2, el usuario es nacho y su dirección IP: 192.168.5
 La interfaz de red que he usado para ambas máquinas son las siguientes:
 
 
-![Texto alternativo](https://github.com/javigarridom95/SWAP/blob/master/P1/interfaces.jpg)
+![Texto alternativo](https://github.com/javigarridom95/SWAP/blob/master/P1/interfaces.png)
 
 
 
