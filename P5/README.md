@@ -3,7 +3,7 @@
 
 1°. Crear una BD con al menos una tabla y algunos datos.
 
-<img src="https://github.com/javigarridom95/SWAP/P5/blob/master/imagenes/img1.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P5/imagenes/img1.png">
 
 Para crear una base de datos introduciremos los siguientes comandos:
 
@@ -18,9 +18,9 @@ Ahora introduciremos los datos en la tabla:
 mysql> insert into datos(nombre,tlf) values ("Carlos",685943689);
 mysql> select * from info;
 
-<img src="https://github.com/javigarridom95/SWAP/P5/blob/master/imagenes/img2.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P5/imagenes/img2.png">
 
-<img src="https://github.com/javigarridom95/SWAP/P5/blob/master/imagenes/img3.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P5/imagenes/img3.png">
 
 
 2°. Realizar la copia de seguridad de la BD completa usando mysqldump.
@@ -46,7 +46,7 @@ Ya podemos ir a la máquina esclavo (maquina2, secundaria) para copiar el archiv
 
 scp root@192.168.56.105:/root/amigos.sql /tmp/
 
-<img src="https://github.com/javigarridom95/SWAP/P5/blob/master/imagenes/img4.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P5/imagenes/img4.png">
 
 Con el archivo de copia de seguridad en el esclavo ya podemos importar la BD completa en el MySQL. Para ello, en un primer paso creamos la BD:
 
@@ -57,7 +57,7 @@ Y en un segundo paso restauramos los datos contenidos en la BD:
 
 mysql -u root -p amigos < /tmp/amigos.sql
 
-<img src="https://github.com/javigarridom95/SWAP/P5/blob/master/imagenes/img5.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P5/imagenes/img5.png">
 
 
 4°. Realizar la configuración maestro-esclavo de los servidores MySQL para que la replicación de datos se realice automáticamente.
@@ -85,10 +85,10 @@ Por último introducimos los siguientes comandos en mysql para configurar la má
 mysql> CHANGE MASTER TO MASTER_HOST='192.168.98.128', MASTER_USER='esclavo', MASTER_PASSWORD='esclavo', MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=980, MASTER_PORT=3306;
 mysql> START SLAVE;
 
-<img src="https://github.com/javigarridom95/SWAP/P5/blob/master/imagenes/img7.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P5/imagenes/img7.png">
 
-<img src="https://github.com/javigarridom95/SWAP/P5/blob/master/imagenes/img8.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P5/imagenes/img8.png">
 
-<img src="https://github.com/javigarridom95/SWAP/P5/blob/master/imagenes/img9.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P5/imagenes/img9.png">
 
 
