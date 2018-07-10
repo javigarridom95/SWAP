@@ -30,7 +30,7 @@ server{
 service nginx restart
 Por último comprobamos que todo funciona correctamente mediante la orden curl:
 
-<img src="https://github.com/javigarridom95/SWAP/P3/imagenes/img1.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P3/imagenes/img1.png">
 
 Si sabemos que alguna de las máquinas finales es más potente, podemos modificar la definición del upstream para pasarle más tráfico que al resto de las del grupo. Para ello, tenemos un modificador llamado weight, al que le damos un valor numérico que indica la carga que le asignamos.
 
@@ -43,7 +43,7 @@ upstream apaches
     server 192.168.56.110 weight=2;
 }
 
-<img src="https://github.com/javigarridom95/SWAP/P3/imagenes/img2.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P3/imagenes/img2.png">
 
 
 Tras instalar el sistema básico, instalamos haproxy.

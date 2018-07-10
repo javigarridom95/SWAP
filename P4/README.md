@@ -19,9 +19,9 @@ Una vez hecho esto, generamos nuestro certificado SSL, dónde nos pedirá una se
 
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/a
 
-<img src="https://github.com/javigarridom95/SWAP/P4/blob/master/imagenes/img1.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P4/imagenes/img1.png">
 
-<img src="https://github.com/javigarridom95/SWAP/P4/blob/master/imagenes/img2.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P4/imagenes/img2.png">
 
 Editamos el archivo de configuración del sitio default-ssl:
 
@@ -41,7 +41,7 @@ curl –k https://192.168.56.105/hola.html
 
 Configurar las reglas del cortafuegos con IPTABLES para asegurar el acceso alos servidores web.
 
-<img src="https://github.com/javigarridom95/SWAP/P4/blob/master/imagenes/img3.png">
+<img src="https://github.com/javigarridom95/SWAP/blob/master/P4/imagenes/img3.png">
 
 Para configurar el cortafuegos utilizamos el siguiente script:
 
